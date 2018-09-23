@@ -6,6 +6,7 @@ module.exports = class KickCommand extends Command {
             name: "kick",
             aliases: ["kicke"],
             group: "mod",
+            guildOnly: true,
             memberName: "kick",
             description: "Kicks a user when executed.",
             examples: ["kick @User#1234"],
