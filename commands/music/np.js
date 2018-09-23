@@ -5,6 +5,7 @@ module.exports = class SayCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'np',
+			guildOnly: true,
 			group: 'music',
 			memberName: 'np',
 			description: 'show audio playback.',
