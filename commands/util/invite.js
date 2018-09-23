@@ -16,11 +16,13 @@ module.exports = class InviteCommand extends Command {
 
 	run(msg) {
 		return msg.say(stripIndents`
-			You cannot invite me to your server, but you can join my home server to use me:
-			${this.client.options.invite || 'Coming soon...'}
+			You can invite me to your server using this: **coming soon**
 
-			You can also self-host me if you prefer:
-			<https://github.com/${XIAO_GITHUB_REPO_USERNAME}/${XIAO_GITHUB_REPO_NAME}>
-		`);
+
+
+you can also join my home server:
+${this.client.options.invite || 'Coming soon...'}
+
+`);
 	}
 };
