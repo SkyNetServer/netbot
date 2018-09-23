@@ -33,7 +33,7 @@ client.registry
 		['text-edit', 'Text Manipulation'],
 		['number-edit', 'Number Manipulation'],
 		['other', 'Other'],
-		['roleplay', 'Roleplay']
+		['action', 'Action']
 	])
 	.registerDefaultCommands({
 		help: false,
