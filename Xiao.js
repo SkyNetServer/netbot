@@ -18,7 +18,8 @@ client.registry
 	.registerGroups([
 		['util', 'Utility'],
 		['info', 'Discord Information'],
-		['random', 'Random Response'], ['nsfw','NSFW']
+		['random', 'Random Response'], 
+	['nsfw','NSFW'],
 		['single', 'Single Response'],
 		['events', 'Events'],
 		['search', 'Search'],
