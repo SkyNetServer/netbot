@@ -6,6 +6,7 @@ module.exports = class SayCommand extends Command {
 		super(client, {
 			name: 'skip',
 			group: 'music',
+			guildOnly: true,
 			memberName: 'skip',
 			description: 'Skips the amount of songs you ask for.',
 			examples: ['skip 2'],
