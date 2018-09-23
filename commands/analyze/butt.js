@@ -6,7 +6,7 @@ module.exports = class ButtCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'butt',
-			aliases: ['butts', 'ass', 'booty'],
+			aliases: ['butt'],
 			group: 'analyze',
 			memberName: 'butt',
 			description: 'Determines a user\'s butt quality.',
