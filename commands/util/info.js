@@ -22,7 +22,7 @@ module.exports = class InfoCommand extends Command {
 	run(msg) {
 		const embed = new MessageEmbed()
 			.setColor(0x00AE86)
-			.setFooter('©2017-2018 helped by dragonfire535#8081')
+			.setFooter('©2017-2018 helped by dragonfire535#8081 | dev/host/update by jamie#8313')
 			.addField('❯ Servers', this.client.guilds.size, true)
 			.addField('❯ Shards', this.client.options.shardCount, true)
 			.addField('❯ Commands', this.client.registry.commands.size, true)
