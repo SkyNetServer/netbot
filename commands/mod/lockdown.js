@@ -5,7 +5,7 @@ module.exports = class LockdownCommand extends Command {
         super(client, {
             name: 'lockdown',
             aliases: ['lock', 'ld'],
-            group: 'moderation',
+            group: 'mod',
             memberName: 'lockdown',
             description: 'Prevents users from posting in the current channel!',
             details: 'Use `lockdown start` and `lockdown stop` to start and stop a lockdown respectively!',
