@@ -6,6 +6,7 @@ module.exports = class SayCommand extends Command {
 		super(client, {
 			name: 'queue',
 			group: 'music',
+			guildOnly: true,
 			memberName: 'queue',
 			description: 'Displays music queue.',
 			examples: ['queue'],
