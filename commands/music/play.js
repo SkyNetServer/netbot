@@ -1,4 +1,3 @@
-const Command = require('../../structures/Command');
 const YouTube = require('simple-youtube-api'),
   moment = require('moment'),
   ytdl = require('ytdl-core'),
