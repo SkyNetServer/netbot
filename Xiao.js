@@ -18,13 +18,13 @@ client.registry
 	.registerGroups([
 		['util', 'Utility'],
 		['info', 'Discord Information'],
-		['random', 'Random Response'],
+		['random', 'Random Response'], ['nsfw','NSFW']
 		['single', 'Single Response'],
 		['events', 'Events'],
 		['search', 'Search'],
 		['analyze', 'Analyzers'],
 		['games', 'Games'],
-	['music','music'], 
+	['music','Music'], 
 	['mod','Moderation'],
 		['voice', 'Voice Channel'],
 		['image-edit', 'Image Manipulation'],
