@@ -1,7 +1,7 @@
 const { Command } = require("discord.js-commando");
 const YouTube = require("simple-youtube-api");
 const { get } = require("snekfetch");
-const Utils = require("../../util/musicBackend.js");
+const Utils = require("../../structures/music");
 
 module.exports = class PlaySongCommand extends Command {
 
