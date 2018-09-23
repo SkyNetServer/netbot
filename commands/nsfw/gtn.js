@@ -1,4 +1,4 @@
-const Command = require('../../structures/Command');
+const Command = require('discord.js-commando'),
 const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
 const errors = require('../../assets/json/errors');
