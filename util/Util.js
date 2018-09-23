@@ -54,6 +54,14 @@ module.exports = class Util {
 	static hash(text, algorithm) {
 		return crypto.createHash(algorithm).update(text).digest('hex');
 	}
+	
+	static async randomFromImgurAlbum(album) {
+		const { body } = await snekfetch
+			.get(`https://api.imgur.com/3/album/${album}`)
+			.set({ Authorization: `Client-ID ${IMGUR_KEY}` });
+		if (!body.data.images.length) return null;
+		return body.data.images[Math.floor(Math.random() * body.data.images.length)].link;
+	}	
 
 	static today(timeZone) {
 		const now = new Date();
