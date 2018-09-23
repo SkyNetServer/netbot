@@ -12,7 +12,7 @@ module.exports = class CardCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'info-card',
-			aliases: ['discord-card'],
+			aliases: ['info-card'],
 			group: 'avatar-edit',
 			memberName: 'card',
 			description: 'Draws a trading card of random rarity based on a user\'s profile.',
