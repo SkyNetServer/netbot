@@ -5,6 +5,7 @@ module.exports = class SayCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'volume',
+			guildOnly: true,
 			group: 'music',
 			memberName: 'volume',
 			description: 'Adjusts volume for audio playback.',
