@@ -1,4 +1,4 @@
-const Command = require('../../structures/Command');
+const Command = require('discord.js-commando'),
 const Discord = require('discord.js');
 const randomPuppy = require('random-puppy');
 const errors = require('../../assets/json/errors');
