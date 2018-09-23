@@ -35,6 +35,8 @@
 		"booru": "^0.3.6", 
 		"ffmpeg":"0.0.4",
 		"canvas": "^2.0.0-alpha.14",
+		 "simple-youtube-api": "^5.0.1",
+		"ytdl-core": "0.25.2",
 		"cheerio": "^1.0.0-rc.2",
 		"snekfetch": "^4.0.4",
 		"common-tags": "^1.8.0",
