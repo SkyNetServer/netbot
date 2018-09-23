@@ -26,6 +26,7 @@ module.exports = class PlaySongCommand extends Command {
         this.queue = this.client.queue;
     }
     async run(msg, { song }) {
+        const channel = msg.member.voiceChannel;
         const url = song ? song.replace(/<(.+)>/g, "$1") : "";
         const permissions = channel.permissionsFor(msg.client.user);
         if (!permissions.has("CONNECT")) {
