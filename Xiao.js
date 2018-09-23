@@ -24,6 +24,7 @@ client.registry
 		['search', 'Search'],
 		['analyze', 'Analyzers'],
 		['games', 'Games'],
+	['music','music'],    
 		['voice', 'Voice Channel'],
 		['image-edit', 'Image Manipulation'],
 		['avatar-edit', 'Avatar Manipulation'],
