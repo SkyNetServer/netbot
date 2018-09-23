@@ -22,14 +22,12 @@ module.exports = class InfoCommand extends Command {
 	run(msg) {
 		const embed = new MessageEmbed()
 			.setColor(0x00AE86)
-			.setFooter('©2017-2018 dragonfire535#8081')
+			.setFooter('©2017-2018 helped by dragonfire535#8081')
 			.addField('❯ Servers', this.client.guilds.size, true)
 			.addField('❯ Shards', this.client.options.shardCount, true)
 			.addField('❯ Commands', this.client.registry.commands.size, true)
 			.addField('❯ Home Server', this.client.options.invite ? `[Here](${this.client.options.invite})` : 'None', true)
-			.addField('❯ Source Code',
-				source ? `[Here](https://github.com/${XIAO_GITHUB_REPO_USERNAME}/${XIAO_GITHUB_REPO_NAME})` : 'N/A', true)
-			.addField('❯ Memory Usage', `${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`, true)
+			..addField('❯ Memory Usage', `${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`, true)
 			.addField('❯ Uptime', moment.duration(this.client.uptime).format('hh:mm:ss', { trim: false }), true)
 			.addField('❯ Version', `v${version}`, true)
 			.addField('❯ Node Version', process.version, true)
