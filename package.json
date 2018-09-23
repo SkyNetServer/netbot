@@ -34,6 +34,7 @@
 		"@discordjs/uws": "^10.149.0",
 		"booru": "^0.3.6", 
 		"ffmpeg":"0.0.4",
+		"klasa": "github:dirigeants/klasa",
 		"emoji-regex": "^7.0.1",
 		"canvas": "^2.0.0-alpha.14",
 		 "simple-youtube-api": "^5.0.1",
