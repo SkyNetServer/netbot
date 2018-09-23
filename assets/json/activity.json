@@ -8,35 +8,39 @@
 		"type": "PLAYING"
 	},
 	{
-		"text": "you eat pant",
+		"text": "your server",
 		"type": "WATCHING"
 	},
 	{
-		"text": "anime",
+		"text": "anime movies",
 		"type": "WATCHING"
 	},
 	{
-		"text": "over the inn",
+		"text": "TV",
 		"type": "WATCHING"
 	},
 	{
-		"text": "at the inn",
+		"text": "Call of Duty: Black Ops",
 		"type": "PLAYING"
 	},
 	{
-		"text": "in Selphia",
+		"text": "on my bed",
 		"type": "PLAYING"
 	},
 	{
-		"text": "with Amber",
+		"text": "with Jack the noob",
 		"type": "PLAYING"
 	},
 	{
-		"text": "with a cardboard box",
+		"text": "in my room.",
+		"type": "PLAYING"
+	},
+        {
+		"text": "fortnite",
 		"type": "PLAYING"
 	},
 	{
-		"text": "in the fridge",
+		"text": "with my friends 😅",
 		"type": "PLAYING"
 	},
 	{
@@ -44,7 +48,19 @@
 		"type": "PLAYING"
 	},
 	{
-		"text": "with a murderous cow",
+		"text": "youtube video",
+		"type": "WATCHING"
+	},
+	{
+		"text": "videos",
+		"type": "WATCHING"
+	},
+	{
+		"text": "my kids play",
+		"type": "WATCHING"
+	},
+	{
+		"text": "with kids",
 		"type": "PLAYING"
 	}
 ]
