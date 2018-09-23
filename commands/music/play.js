@@ -12,7 +12,7 @@ module.exports = class PlaySongCommand extends Command {
       name: 'play',
       memberName: 'play',
       group: 'music',
-      aliases: ['add', 'enqueue', 'start', 'join'],
+      aliases: ['play'],
       description: 'Adds a song to the queue',
       format: 'YoutubeURL|YoutubeVideoSearch',
       examples: ['play {youtube video to play}'],
