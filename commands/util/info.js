@@ -31,7 +31,6 @@ module.exports = class InfoCommand extends Command {
 			.addField('❯ Uptime', moment.duration(this.client.uptime).format('hh:mm:ss', { trim: false }), true)
 			.addField('❯ Version', `v${version}`, true)
 			.addField('❯ Node Version', process.version, true)
-			.addField('❯ Dependencies', this.parseDependencies());
 		return msg.embed(embed);
 	}
 
