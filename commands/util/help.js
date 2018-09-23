@@ -26,11 +26,13 @@ module.exports = class HelpCommand extends Command {
 		if (!command) {
 			const embed = new MessageEmbed()
 				.setTitle('Command List')
+			      .setDescription("The prefix is ``$`` \n use ``$help {command name}`` for more info. Ex: ``$help rip``")
+			       .setTimestamp()
 				.setColor(0x00AE86)
 				.setFooter(`${this.client.registry.commands.size} Commands`);
 			for (const group of this.client.registry.groups.values()) {
 				embed.addField(
-					`❯ ${group.name}`,
+					`👉   ${group.name} commands`,
 					group.commands.map(cmd => `\`${cmd.name}\``).join(', ') || 'None'
 				);
 			}
@@ -41,7 +43,7 @@ module.exports = class HelpCommand extends Command {
                                 if (msg.channel.type !== 'dm') msgs.push(await msg.say('📬 Sent you a DM with information.'));
 				return msgs;
 			} catch (err) {
-				return msg.reply('Failed to send DM. You probably have DMs disabled.');
+				return msg.reply('Failed to send DM. You probably have DMs disabled 💔.');
 			}
 		}
 		return msg.say(stripIndents`
