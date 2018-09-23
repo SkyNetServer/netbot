@@ -1,16 +1,13 @@
-const ImgurAlbumCommand = require('../../structures/commands/ImgurAlbum');
-const { KISS_ALBUM_ID } = process.env;
+const { Command } = require('discord.js-commando');
+const { randomFromImgurAlbum } = require('../../util/Util');
 
-module.exports = class KissCommand extends ImgurAlbumCommand {
+module.exports = class KissCommand extends Command {
 	constructor(client) {
 		super(client, {
 			name: 'kiss',
-			aliases: ['marry'],
 			group: 'roleplay',
 			memberName: 'kiss',
 			description: 'Kisses a user.',
-			clientPermissions: ['ATTACH_FILES'],
-			albumID: KISS_ALBUM_ID,
 			args: [
 				{
 					key: 'user',
@@ -21,7 +18,12 @@ module.exports = class KissCommand extends ImgurAlbumCommand {
 		});
 	}
 
-	generateText(msg, user) {
-		return `_**${msg.author.username}** kisses **${user.username}**._`;
+	async run(msg, { user }) {
+		try {
+			const gif = await randomFromImgurAlbum('twIbD');
+			return msg.say(`_**${msg.author.username}** kisses **${user.username}**._`, { files: [gif] });
+		} catch (err) {
+			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
+		}
 	}
 };
