@@ -33,7 +33,7 @@
 	"dependencies": {
 		"@discordjs/uws": "^10.149.0",
 		"booru": "^0.3.6", 
-		"quick.db": "^3.0.2",
+		"quick.db": "^6.3.2",
 		"ffmpeg":"0.0.4",
 		"cleverbot-unofficial-api": "^0.1.0",
 		"klasa": "github:dirigeants/klasa",
