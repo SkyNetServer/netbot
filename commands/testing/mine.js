@@ -1,7 +1,7 @@
-const commando = require('discord.js-commando');
+const Command = require('../../structures/Command');
 const fs = require("fs");
 
-module.exports = class ButtCommand extends Command {
+module.exports = class mineCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'mine',
