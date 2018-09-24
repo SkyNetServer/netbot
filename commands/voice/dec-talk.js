@@ -5,7 +5,7 @@ module.exports = class TTSCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'tts',
-      group: 'sound',
+      group: 'voice',
       aliases: ['vsay', 'voicesay'],
       memberName: 'tts',
       description: 'Joins your voice channel and speaks the text you specified.',
