@@ -40,7 +40,7 @@ module.exports = class HelpCommand extends Command {
 				const msgs = [];
 				msgs.push(await msg.direct({ embed }));        
 				msg.direct("love using NetBot? you can add me using this link: **coming soon** \n you can vote for me to keep me free and online: **coming soon** \n you can also join my home where i was made: https://discord.me/netbot")
-                                if (msg.channel.type !== 'dm') msgs.push(await msg.say(`*sshh*....Hey there ${msg.author}, I just Sent you a DM with info...`));
+                                if (msg.channel.type !== 'dm') msgs.push(await msg.say(`*sshh*....Hey there ${msg.author}, I just Sent you a DM with all the info you need.`));
 				return msgs;
 			} catch (err) {
 				return msg.reply('Failed to send DM. You probably have DMs disabled.... 💔.');
