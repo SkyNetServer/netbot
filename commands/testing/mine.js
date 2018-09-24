@@ -1,8 +1,7 @@
 const commando = require('discord.js-commando');
 const fs = require("fs");
 
-
-class mineCommand extends commando.Command {
+module.exports = class ButtCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'mine',
