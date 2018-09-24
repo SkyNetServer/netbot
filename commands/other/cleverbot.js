@@ -14,7 +14,7 @@ module.exports = class urbanCommand extends Command {
             args: [
                 {
                     key: 'string',
-                    prompt: 'Wat wil je vragen?',
+                    prompt: 'say something to the cleverbot!',
                     type: 'string'
                 }
             ]
