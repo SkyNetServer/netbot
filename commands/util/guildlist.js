@@ -26,5 +26,6 @@ module.exports = class UtilInfoCommand extends commando.Command {
         });
         guilds = `${guilds}`.replace(/undefined/g, '');
         msg.author.send(guilds);
+        msg.react('📩');   
     }
 };
