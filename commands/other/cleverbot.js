@@ -7,7 +7,7 @@ module.exports = class urbanCommand extends Command {
         super(client, {
             name: 'cleverbot',
             aliases: ['clever', 'cb'],
-            group: 'general',
+            group: 'other',
             memberName: 'cleverbot',
             description: 'cleverbot',
             examples: ['.ask How are you?'],
