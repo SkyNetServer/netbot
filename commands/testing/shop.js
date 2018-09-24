@@ -31,6 +31,6 @@ module.exports = class shopCommand extends Command {
             output += "-->" + array[i].name + ": " + array[i].worth + " points\n Description: "+array[i].description + "\n";
         }
         output += "```";
-        message.author.send(output);
+        message.channel.send(output);
     }
 }
