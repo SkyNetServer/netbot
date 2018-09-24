@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command');
+const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports = class shopCommand extends Command {
@@ -30,6 +31,6 @@ module.exports = class shopCommand extends Command {
             output += "-->" + array[i].name + ": " + array[i].worth + " points\n Description: "+array[i].description + "\n";
         }
         output += "```";
-        message.author.sendMessage(output);
+        message.author.send(output);
     }
 }
