@@ -1,0 +1,29 @@
+{
+    "Titles": {
+        "Newbie": {
+            "name": "Newbie",
+            "color": "#706f6c",
+            "hoist": true
+        },
+        "Apprenctice": {
+            "name": "Apprenctice",
+            "color": "#ffff00",
+            "hoist": true
+        },
+        "Mentor": {
+            "name": "Mentor",
+            "color": "#001489",
+            "hoist": true
+        },
+        "Expert": {
+            "name": "Expert",
+            "color": "#4e008e",
+            "hoist": true
+        },
+        "Master": {
+            "name": "Master",
+            "color": "#ff0000",
+            "hoist": true
+        }
+    }
+}
