@@ -35,6 +35,7 @@
 		"booru": "^0.3.6", 
 		"quick.db": "^6.3.2",
 		"ffmpeg":"0.0.4",
+		"google-tts-api":"0.0.3",
 		"cleverbot-unofficial-api": "^0.1.0",
 		"klasa": "github:dirigeants/klasa",
 		"emoji-regex": "^7.0.1",
