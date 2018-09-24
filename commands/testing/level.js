@@ -13,7 +13,5 @@ module.exports = class levelCommand extends Command {
 
     async run(message, args) {
         let points = JSON.parse(fs.readFileSync('rpg_files/points.json', 'utf8'));
-        let userData = points[message.author.id];
-        message.channel.send("```\nName: "+message.author.username+" \nLevel: "+userData.level+" \nPoints: "+userData.points+" \nTotal: "+userData.total+"\nPickaxe: "+userData.pickaxe+"\n```");
-    }
+       }
 }
