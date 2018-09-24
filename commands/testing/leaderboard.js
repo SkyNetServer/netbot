@@ -1,14 +1,16 @@
+const Command = require('../../structures/Command');
 const fs = require("fs");
 let points = JSON.parse(fs.readFileSync('rpg_files/points.json', 'utf8'));
 var bot;
 
-class leaderboardCommand extends commando.Command {
+module.exports = class leaderboardCommand extends Command {
     constructor(client) {
         bot = client;
         super(client, {
             name: 'leaderboard',
             aliases: ['scoreboard'],
             group: 'rpg',
+            guildOnly: true,
             memberName: 'leaderboard',
             description: 'Shows Top 5 Players 8)'
         });
