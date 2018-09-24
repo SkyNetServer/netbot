@@ -1,0 +1,23 @@
+{
+    "stone_pickaxe":{
+        "name": "Stone Pickaxe",
+        "worth": 1000,
+        "pickaxe": "stone",
+        "description": "Adds 5% points onto ore",
+        "purchasable": true
+    },
+    "iron_pickaxe":{
+        "name": "Iron Pickaxe",
+        "worth": 12500,
+        "pickaxe": "iron",
+        "description": "Adds 25% points onto ore",
+        "purchasable": true
+    },
+    "diamond_pickaxe":{
+        "name": "Diamond Pickaxe",
+        "worth": 40000,
+        "pickaxe": "diamond",
+        "description": "Adds 40% points onto ore",
+        "purchasable": true
+    }
+}
