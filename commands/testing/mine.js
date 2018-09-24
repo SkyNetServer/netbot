@@ -19,7 +19,7 @@ module.exports = class mineCommand extends Command {
         let players = JSON.parse(fs.readFileSync('rpg_files/players.json', 'utf8'));
 let points = JSON.parse(fs.readFileSync('rpg_files/points.json', 'utf8'));
         if (message.author.bot) return;
-        if (message.channel.name != 'rpg') {
+        if (message.channel.name != '') {
             message.reply('Command must be used in text channel "rpg"');
             return;
         }
