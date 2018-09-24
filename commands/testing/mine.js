@@ -17,6 +17,5 @@ module.exports = class mineCommand extends Command {
 
     async run(message, args) {
         let players = JSON.parse(fs.readFileSync('rpg_files/players.json', 'utf8'));;
-:
     }
 }
