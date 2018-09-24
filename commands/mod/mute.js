@@ -7,6 +7,7 @@ module.exports = class MuteCommand extends Command {
     super(stevebot, {
       name: 'mute',
       group: 'mod',
+      guildOnly: true,
       memberName: 'mute',
       description: 'Puts a user in the muted role.',
       format: '[user] [reason]',
