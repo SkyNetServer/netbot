@@ -9,7 +9,7 @@ module.exports = class urbanCommand extends Command {
             aliases: ['clever', 'cb'],
             group: 'other',
             memberName: 'cleverbot',
-            description: 'cleverbot',
+            description: 'chat with cleverbot',
             examples: ['.ask How are you?'],
             args: [
                 {
