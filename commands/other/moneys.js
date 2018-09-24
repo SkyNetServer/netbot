@@ -6,7 +6,7 @@ module.exports = class moneyCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'money',
-            group: 'eco',
+            group: 'other',
             memberName: 'money',
             description: 'Get a users balance.',
             examples: ['money'],
