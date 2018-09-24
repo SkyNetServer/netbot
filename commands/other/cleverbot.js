@@ -24,7 +24,7 @@ module.exports = class urbanCommand extends Command {
     run(msg, args) {
         let cs;
         cleverbot("3bd32ce29dee047caae09ad3198c35d1", args.string, cs).then(response => {
-            msg.channel.send(response.output);
+            msg.channel.send(`**[NetBot]** ${response.output}`);
             cs = response.cs;
             console.log(response);
         }).catch(console.error);
