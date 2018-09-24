@@ -1,0 +1,110 @@
+{
+    "148488274061688832": {
+        "points": 13118,
+        "total": 13418,
+        "level": 11,
+        "pickaxe": "stone",
+        "active": false
+    },
+    "138812991444484096": {
+        "points": 0,
+        "total": 0,
+        "level": 0,
+        "pickaxe": "stone"
+    },
+    "176146541231210496": {
+        "points": 144.5,
+        "total": 144.5,
+        "level": 1,
+        "pickaxe": "stone"
+    },
+    "251934127958261760": {
+        "points": 1423.5,
+        "total": 48823.5,
+        "level": 22,
+        "pickaxe": "diamond",
+        "active": false
+    },
+    "234517545762291712": {
+        "points": 7852.5,
+        "total": 7952.5,
+        "level": 8,
+        "pickaxe": "iron"
+    },
+    "235204343509286912": {
+        "points": -51,
+        "total": 249,
+        "level": 1,
+        "pickaxe": "stone"
+    },
+    "238760443147976709": {
+        "points": 0,
+        "total": 14140,
+        "level": 11,
+        "pickaxe": "iron",
+        "active": false
+    },
+    "236920181668970496": {
+        "points": 0,
+        "total": 0,
+        "level": 0,
+        "pickaxe": "stone"
+    },
+    "198251263299682313": {
+        "points": 34287.5,
+        "total": 32187.5,
+        "level": 17,
+        "pickaxe": "iron",
+        "active": false
+    },
+    "234870171813150721": {
+        "points": 0,
+        "total": 0,
+        "level": 0,
+        "pickaxe": "wood"
+    },
+    "138706014282186753": {
+        "points": 0,
+        "total": 0,
+        "level": 0
+    },
+    "239109153094631425": {
+        "points": 43755,
+        "total": 23515,
+        "level": 15,
+        "pickaxe": "wood",
+        "active": false
+    },
+    "244618889483255809": {
+        "points": 0,
+        "total": 0,
+        "level": 0,
+        "pickaxe": "stone"
+    },
+    "238824402790252555": {
+        "points": 22674,
+        "total": 22774,
+        "level": 15,
+        "pickaxe": "stone",
+        "active": false
+    },
+    "187373610040688641": {
+        "points": 0,
+        "total": 0,
+        "level": 0,
+        "pickaxe": "wood"
+    },
+    "184494304306135040": {
+        "points": 200,
+        "total": 200,
+        "level": 1,
+        "pickaxe": "wood"
+    },
+    "284885970338185228": {
+        "points": 9095,
+        "total": 9295,
+        "level": 9,
+        "pickaxe": "wood",
+        "active": false
+    }
+}
