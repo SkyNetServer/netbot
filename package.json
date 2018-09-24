@@ -34,6 +34,7 @@
 		"@discordjs/uws": "^10.149.0",
 		"booru": "^0.3.6", 
 		"ffmpeg":"0.0.4",
+		"cleverbot-unofficial-api": "^0.1.0",
 		"klasa": "github:dirigeants/klasa",
 		"emoji-regex": "^7.0.1",
 		"canvas": "^2.0.0-alpha.14",
