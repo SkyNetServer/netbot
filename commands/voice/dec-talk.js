@@ -1,50 +1,42 @@
-const Command = require('../../structures/Command');
-const request = require('node-superfetch');
+const { Command } = require('discord.js-commando');
+const tts = require('google-tts-api');
 
-module.exports = class DECTalkCommand extends Command {
-	constructor(client) {
-		super(client, {
-			name: 'dec-talk',
-			aliases: ['moon-base-alpha', 'text-to-speech', 'tts'],
-			group: 'voice',
-			memberName: 'dec-talk',
-			description: 'The world\'s best Text-to-Speech.',
-			guildOnly: true,
-			throttling: {
-				usages: 1,
-				duration: 10
-			},
-			args: [
-				{
-					key: 'text',
-					prompt: 'What text do you want to say?',
-					type: 'string',
-					max: 1024
-				}
-			]
-		});
-	}
+module.exports = class TTSCommand extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'tts',
+      group: 'sound',
+      aliases: ['vsay', 'voicesay'],
+      memberName: 'tts',
+      description: 'Joins your voice channel and speaks the text you specified.',
+      guildOnly: true,
+      args: [
+        {
+          key: 'text',
+          prompt: 'What would you like me to say in the voice channel?\n',
+          type: 'string',
+          max: 200
+        }
+      ],
+      throttling: {
+        usages: 1,
+        duration: 10
+      }
+    });
+  }
 
-	async run(msg, { text }) {
-		const voiceChannel = msg.member.voice.channel;
-		if (!voiceChannel) return msg.say('Please enter a voice channel first.');
-		if (!voiceChannel.permissionsFor(this.client.user).has(['CONNECT', 'SPEAK'])) {
-			return msg.say('Missing the "Connect" or "Speak" permission for the voice channel.');
-		}
-		if (!voiceChannel.joinable) return msg.say('Your voice channel is not joinable.');
-		if (this.client.voiceConnections.has(voiceChannel.guild.id)) return msg.say('I am already playing a sound.');
-		try {
-			const connection = await voiceChannel.join();
-			const { url } = await request
-				.get('http://tts.cyzon.us/tts')
-				.query({ text });
-			const dispatcher = connection.play(url);
-			dispatcher.once('finish', () => voiceChannel.leave());
-			dispatcher.once('error', () => voiceChannel.leave());
-			return null;
-		} catch (err) {
-			voiceChannel.leave();
-			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
-		}
-	}
+  async run(msg, { text }) {
+    if (!msg.guild.me.permissions.has('CONNECT') || !msg.guild.me.permissions.has('SPEAK')) return msg.say(':no_entry_sign: I don\'t have the **Connect** or **Speak** permission.');
+    const voiceChannel = msg.member.voiceChannel;
+    if (!voiceChannel) return msg.reply(':no_entry_sign: Please be in a voice channel first!');
+    if (!this.client.voiceConnections.get(msg.channel.guild.id)) {
+      const connection = await voiceChannel.join().catch(e => msg.say(`:no_entry_sign: Something wen't wrong!\n${e}`));
+      const url = await tts(text, 'en', 1);
+      const dispatcher = connection.play(url);
+      msg.react('📢');
+      dispatcher.on('end', () => voiceChannel.leave());
+    } else {
+      msg.say(':no_entry_sign: Sorry but it seems like I\'m already playing something on this server.');
+    }
+  }
 };
