@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const commando = require('discord.js-commando');
 const ytdl = require("ytdl-core");
-const JukeBox = require("./JukeBox.js");
+const JukeBox = require("../../structures/JukeBox.js");
 
 class AddCommand extends commando.Command {
 
