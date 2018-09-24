@@ -1,6 +1,6 @@
 {
-    "token": "youtube_api_token",
-    "GLOBAL": false,
+    "token": "AIzaSyA9VjIwaElXi0_Xt_j3uBR94bVDSuSmRX8",
+    "GLOBAL": true,
     "MAX_QUEUE_SIZE": 20,
     "MAX_PLAYLIST_LENGTH": 15,
     "DEFAULT_VOLUME": 100,
