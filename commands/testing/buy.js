@@ -13,10 +13,7 @@ module.exports = class buyCommand extends Command {
 
     async run(message, args) {
         if (message.author.bot) return;
-        if (message.channel.name != 'mine') {
-            message.reply('Command must be used in text channel "mine"');
-            return;
-        }
+       
         let points = JSON.parse(fs.readFileSync('rpg_files/points.json', 'utf8'));
         let items = JSON.parse(fs.readFileSync('rpg_files/items.json', 'utf8'));
         let userData = points[message.author.id];
