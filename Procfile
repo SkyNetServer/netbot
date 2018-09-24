@@ -1,1 +1,1 @@
-worker: node Xiao.js
+worker: node netbot.js
