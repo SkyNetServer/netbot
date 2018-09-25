@@ -1,7 +1,7 @@
 const Command = require('../../structures/Command');
 const oneLine = require('common-tags').oneLine;
 const { MessageEmbed } = require('discord.js');
-
+const Discord = require("discord.js");
 
 module.exports = class SupportCommand extends Command {
   constructor(client) {
@@ -26,7 +26,7 @@ module.exports = class SupportCommand extends Command {
     const client = this.client
     message.reply('Thank you for contacting NetBot Support! If there are any available support representatives, they will contact you soon.')
     let chan = message.channel
-    let supportChan = '490865089201569793'
+    let supportChan = client.channels.get("490865089201569793")
     const embed = new MessageEmbed()
       .setTitle(':bangbang: **New support call** :bangbang:')
       .setAuthor(`${message.author.tag} (${message.author.id})`)
@@ -34,13 +34,13 @@ module.exports = class SupportCommand extends Command {
       .setDescription(`**Guild:** ${message.guild.name} (${message.guild.id}) \n**Channel:** #${message.channel.name} (${message.channel.id}) \n**Started by:** ${message.author.tag} (${message.author.id})`)
       .setFooter('NetBot Support System')
       .setTimestamp()
-    this.client.channels.get(supportChan).send({
+    message.channels.send({
       embed: embed
     })
-    const collector = client.channels.get(supportChan).createCollector(message => message.content.startsWith('call'), {
+    const collector = message.channels.send.createCollector(message => message.content.startsWith('call'), {
       time: 0
     })
-    client.channels.get(supportChan).send('Do `call answer` to answer call and connect to server in need or `call end` to deny call.')
+    message.channels.send.send('Do `call answer` to answer call and connect to server in need or `call end` to deny call.')
     collector.on('message', (message) => {
       if (message.content === 'call end') collector.stop('aborted')
       if (message.content === 'call answer') collector.stop('success')
@@ -49,12 +49,12 @@ module.exports = class SupportCommand extends Command {
       if (reason === 'time') return message.reply('The call timed out.')
       if (reason === 'aborted') {
         message.reply(':x: The call has been denied.')
-        client.channels.get(supportChan).send(':x: Succesfully denied call.')
+       message.channels.send(supportChan).send(':x: Succesfully denied call.')
       }
       if (reason === 'success') {
-        client.channels.get(supportChan).send(':heavy_check_mark: Call picked up!')
+       message.channels.send(':heavy_check_mark: Call picked up!')
         //eslint-disable-next-line no-useless-escape
-        client.channels.get(supportChan).send('Do \`call end\` at any time to end the call.')
+        message.channels.send('Do \`call end\` at any time to end the call.')
         chan.send(`${message.author}`)
         chan.send(':heavy_check_mark: Your call has been picked up by a support representative!')
         chan.send(':hourglass: You will be helped shortly.')
@@ -72,7 +72,7 @@ module.exports = class SupportCommand extends Command {
 
               return isEnabled = false
             }
-            if (message.channel.id === chan.id) client.channels.get(supportChan).send(`:telephone_receiver: **${message.author.tag}**: ${message.content}`)
+            if (message.channel.id === chan.id) message.channel.send(`:telephone_receiver: **${message.author.tag}**: ${message.content}`)
             if (message.channel.id === supportChan) chan.send(`:star: ${message.content}`)
           }
           contact(client)
