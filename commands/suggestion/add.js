@@ -1,4 +1,4 @@
-const Commando = require('discord.js-commando');
+const Command = require('../../structures/Command');
 const RichEmbed = require('discord.js').RichEmbed;
 
 module.exports = class AddCommand extends Command {
