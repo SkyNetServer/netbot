@@ -1,7 +1,7 @@
 const Commando = require('discord.js-commando');
 const oneLine = require('common-tags').oneLine;
 
-class ChannelCommand extends Commando.Command {
+module.exports = class ChannelCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'channel',
