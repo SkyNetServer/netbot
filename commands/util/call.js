@@ -5,13 +5,13 @@ const { RichEmbed } = require('discord.js');
 module.exports = class SupportCommand extends commando.Command {
   constructor(client) {
     super(client, {
-      name: 'support',
-      aliases: ['call', 'contact', 'supportcall', 'helpme', 'howtouse'],
-      group: 'support',
-      memberName: 'support',
+      name: 'call',
+      aliases: ['call'],
+      group: 'util',
+      memberName: 'call',
       description: 'Calls the developer server for support.',
       details: oneLine `
-        Do you need help with QuoteBot?
+        Do you need help with NetBot?
         Use this command to get in contact with the developers and get the help you need!
 			`,
       examples: ['support'],
