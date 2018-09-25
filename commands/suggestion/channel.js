@@ -5,7 +5,7 @@ class ChannelCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'channel',
-            group: 'util',
+            group: 'suggestions',
             memberName: 'channel',
             description: 'Shows or sets the suggestion channel.',
             format: '[#channel/"none"]',
