@@ -4,9 +4,9 @@ const oneLine = require('common-tags').oneLine;
 module.exports = class ChannelCommand extends Command {
     constructor(client) {
         super(client, {
-            name: 'channel',
+            name: 'set',
             group: 'suggestions',
-            memberName: 'channel',
+            memberName: 'set',
             description: 'Shows or sets the suggestion channel.',
             format: '[#channel/"none"]',
             details: oneLine`
