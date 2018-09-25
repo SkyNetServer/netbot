@@ -28,7 +28,7 @@ module.exports = class SupportCommand extends commando.Command {
     let supportChan = '490865089201569793'
     const embed = new MessageEmbed()
       .setTitle(':bangbang: **New support call** :bangbang:')
-      .setAuthor(`${message.author.tag} (${message.author.id})`, `${message.author.avatarURL}`)
+      .setAuthor(`${message.author.tag} (${message.author.id})`)
       .setColor(0xFF0000)
       .setDescription(`**Guild:** ${message.guild.name} (${message.guild.id}) \n**Channel:** #${message.channel.name} (${message.channel.id}) \n**Started by:** ${message.author.tag} (${message.author.id})`)
       .setFooter('NetBot Support System')
