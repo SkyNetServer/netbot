@@ -17,6 +17,7 @@ client.registry
 	.registerTypesIn(path.join(__dirname, 'types'))
 	.registerGroups([
 		['util', 'Utility'],
+	['suggestions','suggestions'],
 		['info', 'Discord Information'],
 		['random', 'Random Response'], 
 	['nsfw','NSFW'],
@@ -34,7 +35,7 @@ client.registry
 		['number-edit', 'Number Manipulation'],
 		['other', 'Other'],
 		['action', 'Action'],
-	['rpg','Testing mode']
+	['rpg','rpg']
 	
 	])
 	.registerDefaultCommands({
