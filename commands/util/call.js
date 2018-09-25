@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 const oneLine = require('common-tags').oneLine;
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = class SupportCommand extends commando.Command {
   constructor(client) {
@@ -26,7 +26,7 @@ module.exports = class SupportCommand extends commando.Command {
     message.reply('Thank you for contacting NetBot Support! If there are any available support representatives, they will contact you soon.')
     let chan = message.channel
     let supportChan = '490865089201569793'
-    const embed = new RichEmbed()
+    const embed = new MessageEmbed()
       .setTitle(':bangbang: **New support call** :bangbang:')
       .setAuthor(`${message.author.tag} (${message.author.id})`, `${message.author.avatarURL}`)
       .setColor(0xFF0000)
