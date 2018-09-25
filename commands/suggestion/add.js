@@ -10,7 +10,6 @@ module.exports = class AddCommand extends Command {
             memberName: 'add',
             description: 'Add a suggestion',
             examples: ['add "Add music bot" "Please add a music bot to the server, because it\'s fun!"'],
-            guildOnly: true,
             throttling: {
                 usages: 2,
                 duration: 60
