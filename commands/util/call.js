@@ -37,10 +37,10 @@ module.exports = class SupportCommand extends Command {
     this.client.channels.get(supportChan).send({
       embed: embed
     })
-    const collector = this.client.channels.get(supportChan).createCollector(message => message.content.startsWith('call'), {
+    const collector = client.channels.get(supportChan).createCollector(message => message.content.startsWith('call'), {
       time: 0
     })
-    this.client.channels.get(supportChan).send('Do `call answer` to answer call and connect to server in need or `call end` to deny call.')
+    client.channels.get(supportChan).send('Do `call answer` to answer call and connect to server in need or `call end` to deny call.')
     collector.on('message', (message) => {
       if (message.content === 'call end') collector.stop('aborted')
       if (message.content === 'call answer') collector.stop('success')
@@ -49,12 +49,12 @@ module.exports = class SupportCommand extends Command {
       if (reason === 'time') return message.reply('The call timed out.')
       if (reason === 'aborted') {
         message.reply(':x: The call has been denied.')
-        this.client.channels.get(supportChan).send(':x: Succesfully denied call.')
+        client.channels.get(supportChan).send(':x: Succesfully denied call.')
       }
       if (reason === 'success') {
-        this.client.channels.get(supportChan).send(':heavy_check_mark: Call picked up!')
+        client.channels.get(supportChan).send(':heavy_check_mark: Call picked up!')
         //eslint-disable-next-line no-useless-escape
-        this.client.channels.get(supportChan).send('Do \`call end\` at any time to end the call.')
+        client.channels.get(supportChan).send('Do \`call end\` at any time to end the call.')
         chan.send(`${message.author}`)
         chan.send(':heavy_check_mark: Your call has been picked up by a support representative!')
         chan.send(':hourglass: You will be helped shortly.')
