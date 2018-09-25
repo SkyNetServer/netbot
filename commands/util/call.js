@@ -2,7 +2,8 @@ const commando = require('discord.js-commando');
 const oneLine = require('common-tags').oneLine;
 const { MessageEmbed } = require('discord.js');
 
-module.exports = class SupportCommand extends commando.Command {
+
+module.exports = class SupportCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'call',
