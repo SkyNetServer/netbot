@@ -29,7 +29,7 @@ module.exports = class HelpCommand extends Command {
 			      .setDescription("The prefix is ``$`` \n use ``$help {command name}`` for more info. Ex: ``$help rip``")
 			       .setTimestamp()
 				.setColor(0x00AE86)
-				.setFooter(`${this.client.registry.commands.size} Commands`);
+				.setFooter(`${this.client.registry.commands.size} Commands in all | [Support Server](https://discord.me/netbot) | [Vote](https://discordbots.org/bot/453559993619447809/vote) | [Add me](https://discordapp.com/oauth2/authorize?client_id=453559993619447809&scope=bot&permissions=0)`);
 			for (const group of this.client.registry.groups.values()) {
 				embed.addField(
 					`👉   ${group.name} commands`,
@@ -39,8 +39,7 @@ module.exports = class HelpCommand extends Command {
 			try {
 				const msgs = [];
 				msgs.push(await msg.direct({ embed }));        
-				msg.direct("love using NetBot? you can add me using this link: **coming soon** \n you can vote for me to keep me free and online: **coming soon** \n you can also join my home where i was made: https://discord.me/netbot")
-                                if (msg.channel.type !== 'dm') msgs.push(await msg.say(`*sshh*....Hey there ${msg.author}, I just Sent you a DM with all the info you need.`));
+                                if (msg.channel.type !== 'dm') msgs.push(await msg.say(`sends to your DM's.`));
 				return msgs;
 			} catch (err) {
 				return msg.reply('Failed to send DM. You probably have DMs disabled.... 💔.');
