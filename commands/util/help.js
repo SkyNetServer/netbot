@@ -34,13 +34,16 @@ module.exports = class HelpCommand extends Command {
 				embed.addField(
 					`👉   ${group.name} commands`,
 					group.commands.map(cmd => `\`${cmd.name}\``).join(', ') || 'None'
-				)
-				.addField("About me","[Support Server](https://discord.me/netbot) | [Vote](https://discordbots.org/bot/453559993619447809/vote) | [Add me](https://discordapp.com/oauth2/authorize?client_id=453559993619447809&scope=bot&permissions=0)");
-		}
+				);
+				const embed2 = new MessageEmbed()
+				.setDescription("[Support Server](https://discord.me/netbot) \n [Vote](https://discordbots.org/bot/453559993619447809/vote) \n [Add me](https://discordapp.com/oauth2/authorize?client_id=453559993619447809&scope=bot&permissions=0)")
+				
+				}
 			try {
 				const msgs = [];
-				msgs.push(await msg.direct({ embed }));        
-                                if (msg.channel.type !== 'dm') msgs.push(await msg.say(`sends to your DM's.`));
+				msgs.push(await msg.direct({ embed }));
+				msgs.push({ embed2 }); 				
+                                  if (msg.channel.type !== 'dm') msgs.push(await msg.say(`sends to your DM's.`));
 				return msgs;
 			} catch (err) {
 				return msg.reply('Failed to send DM. You probably have DMs disabled.... 💔.');
