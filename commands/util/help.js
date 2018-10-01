@@ -28,7 +28,7 @@ module.exports = class HelpCommand extends Command {
 				.setTitle('Command List')
 			      .setDescription("The prefix is ``$`` \n use ``$help {command name}`` for more info. Ex: ``$help rip``")
 			       .setTimestamp()
-				.setColor(0x00AE86)		
+				.setColor("#00FFFF")		
 				.setFooter(`${this.client.registry.commands.size} Commands in all`)
 			for (const group of this.client.registry.groups.values()) {
 				embed.addField(
