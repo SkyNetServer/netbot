@@ -34,7 +34,7 @@ module.exports = class HelpCommand extends Command {
 				embed.addField(
 					`👉   ${group.name} commands`,
 					group.commands.map(cmd => `\`${cmd.name}\``).join(', ') || 'None'
-				);
+				)
 				.addField("About me","[Support Server](https://discord.me/netbot) | [Vote](https://discordbots.org/bot/453559993619447809/vote) | [Add me](https://discordapp.com/oauth2/authorize?client_id=453559993619447809&scope=bot&permissions=0)");
 		}
 			try {
