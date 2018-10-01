@@ -42,7 +42,7 @@ module.exports = class HelpCommand extends Command {
 			try {
 				const msgs = [];
 				msgs.push(await msg.direct({ embed }));
-				msgs.direct({ embed2 }); 				
+				msgs.push(await msg.direct({ embed2 })); 				
                                   if (msg.channel.type !== 'dm') msgs.push(await msg.say(`sends to your DM's.`));
 				return msgs;
 			} catch (err) {
