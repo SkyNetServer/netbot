@@ -48,7 +48,7 @@
 		"type": "PLAYING"
 	},
 	{
-		"text": "with my friends 😅",
+		"text": "with my friends.",
 		"type": "PLAYING"
 	},
 	{
@@ -63,6 +63,18 @@
 		"text": "videos",
 		"type": "WATCHING"
 	},
+	{
+		"text": "music",
+		"type": "LISTENING"
+	},
+	{
+		"text": "lil peep music",
+		"type": "LISTENING"
+	},
+	{
+		"text": "you  <( ͡° ͜ʖ ͡°)>",
+		"type": "WATCHING"
+        },
 	{
 		"text": "the sky",
 		"type": "WATCHING"
