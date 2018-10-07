@@ -38,7 +38,6 @@ module.exports = class PlaySongCommand extends Command {
         const url = args.url.replace(/<(.+)>/g, '$1');
         const queue = this.queue.get(msg.guild.id);
 
-        let voiceChannel;
         if (!queue) {
             const voiceChannel = msg.member.voiceChannel;
             if (!voiceChannel) return msg.channel.send('You need to be in a voice channel to play music!');
