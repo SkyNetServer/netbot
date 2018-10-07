@@ -44,8 +44,8 @@ module.exports = class PlaySongCommand extends Command {
         if (!voiceChannel) return msg.reply("You seem not to be in a voice channel.")
         let permissions = voiceChannel.permissionsFor(msg.client.user);
         if (!permissions.has('CONNECT')) {
-            return msg.reply("I couldn't connect, make sure I have the proper permissions!")
-        }
+	return msg.reply("I couldn't connect, make sure I have the proper permissions!")
+	}
         if (!permissions.has('SPEAK')) {
             return msg.reply("I can't speak in your voice channel!")
         } else if (!queue.voiceChannel.members.has(msg.author.id)) {
