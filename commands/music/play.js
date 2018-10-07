@@ -40,17 +40,14 @@ module.exports = class PlaySongCommand extends Command {
 
        let voiceChannel;
 		if (!queue) {
-			voiceChannel = msg.member.voiceChannel; // eslint-disable-line
-			if (!voiceChannel) {
-				return msg.reply('you aren\'t in a voice channel, ya dingus.');
-			}
-            const permissions = voiceChannel.permissionsFor(msg.client.user);
-            if (!permissions.has('CONNECT')) {
-                return msg.channel.send('I cannot connect to this voice channel, make sure I have the proper permissions!');
-            }
-            if (!permissions.has('SPEAK')) {
-                return msg.channel.send('I cannot speak in this voice channel, make sure I have the proper permissions!');
-            }
+	let voiceChannel = msg.member.voiceChannel;
+        if (!voiceChannel) return msg.reply("You seem not to be in a voice channel.")
+        let permissions = voiceChannel.permissionsFor(msg.client.user);
+        if (!permissions.has('CONNECT')) {
+            return msg.reply("I couldn't connect, make sure I have the proper permissions!")
+        }
+        if (!permissions.has('SPEAK')) {
+            return msg.reply("I can't speak in your voice channel!")
         } else if (!queue.voiceChannel.members.has(msg.author.id)) {
             return msg.reply('you\'re not in the voice channel. You better not be trying to mess with their mojo, man.');
         }
