@@ -6,7 +6,7 @@ module.exports = class ConnectCommand extends Command {
         super(client, {
             name: 'summon',
             group: 'music',
-            aliases: ['connect', 'join'],
+            aliases: ['summon'],
             memberName: 'summon',
             description: 'Connects the bot to your current channel.',
             examples: ['!disconnect'],
