@@ -38,8 +38,8 @@ module.exports = class PlaySongCommand extends Command {
         const url = args.url.replace(/<(.+)>/g, '$1');
         const queue = this.queue.get(msg.guild.id);
 
-       let voiceChannel;
-		if (!queue) {
+       
+        if (!queue) {
 	let voiceChannel = msg.member.voiceChannel;
         if (!voiceChannel) return msg.reply("You seem not to be in a voice channel.")
         let permissions = voiceChannel.permissionsFor(msg.client.user);
