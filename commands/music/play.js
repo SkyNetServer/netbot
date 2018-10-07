@@ -38,9 +38,12 @@ module.exports = class PlaySongCommand extends Command {
         const url = args.url.replace(/<(.+)>/g, '$1');
         const queue = this.queue.get(msg.guild.id);
 
-        if (!queue) {
-            const voiceChannel = msg.member.voiceChannel;
-            if (!voiceChannel) return msg.channel.send('You need to be in a voice channel to play music!');
+       let voiceChannel;
+		if (!queue) {
+			voiceChannel = msg.member.voiceChannel; // eslint-disable-line
+			if (!voiceChannel) {
+				return msg.reply('you aren\'t in a voice channel, ya dingus.');
+			}
             const permissions = voiceChannel.permissionsFor(msg.client.user);
             if (!permissions.has('CONNECT')) {
                 return msg.channel.send('I cannot connect to this voice channel, make sure I have the proper permissions!');
