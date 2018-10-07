@@ -40,7 +40,7 @@ module.exports = class PlaySongCommand extends Command {
 
         let voiceChannel;
         if (!queue) {
-            voiceChannel = msg.member.voiceChannel;
+            const voiceChannel = msg.member.voiceChannel;
             if (!voiceChannel) return msg.channel.send('You need to be in a voice channel to play music!');
             const permissions = voiceChannel.permissionsFor(msg.client.user);
             if (!permissions.has('CONNECT')) {
