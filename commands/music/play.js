@@ -48,6 +48,8 @@ module.exports = class PlaySongCommand extends Command {
 	}
         if (!permissions.has('SPEAK')) {
             return msg.reply("I can't speak in your voice channel!")
+	}
+		
         } else if (!queue.voiceChannel.members.has(msg.author.id)) {
             return msg.reply('you\'re not in the voice channel. You better not be trying to mess with their mojo, man.');
         }
