@@ -39,7 +39,7 @@
 		"cleverbot-unofficial-api": "^0.1.0",
 		"klasa": "github:dirigeants/klasa",
 		"emoji-regex": "^7.0.1",
-		"canvas": "^2.0.0-alpha.14",
+		"canvas": "^2.0.1",
 		 "simple-youtube-api": "^5.0.1",
 		"ytdl-core": "0.25.2",
 		"cheerio": "^1.0.0-rc.2",
