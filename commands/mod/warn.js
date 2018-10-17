@@ -10,7 +10,7 @@ module.exports = class NCommand extends Command {
             guildOnly: true,
             userPermissions: ["MANAGE_MESSAGES", "MANAGE_GUILD"],
             description: "Warns a member",
-            group: "moderation",
+            group: "mod",
             args: [
                 {
                     key: "member",
