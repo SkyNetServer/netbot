@@ -12,7 +12,7 @@ module.exports = class NCommand extends Command {
             description: "Mutes a member",
             guildOnly: true,
             userPermissions: ["MANAGE_MESSAGES", "MANAGE_GUILD"],
-            group: "moderation",
+            group: "mod",
             args: [
                 {
                     key: "member",
@@ -35,7 +35,7 @@ module.exports = class NCommand extends Command {
     async run(message, {member,time, content}) {
         const modlogs = message.guild.channels.find(c => c.name === "modlogs")
         let moderatorname = `<@${message.author.id}>`
-        if (!modlogs) return message.channel.send("Can't find **modlogs**");
+        if (!modlogs) return message.channel.send("Can't find **modlogs**. 🚫");
         let tomute = member
         if (tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry but i can't mute Mods/Admins!");
         let muterole = message.guild.roles.find(r => r.name === "Muted") || message.guild.roles.find(r => r.name === "muted")
