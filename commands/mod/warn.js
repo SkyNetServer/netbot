@@ -1,5 +1,6 @@
-const { Command } = require('discord.js-commando'),
-    Discord = require('discord.js');
+const { Command } = require('discord.js-commando');
+const { MessageEmbed } = require('discord.js');
+const  { Discord } = require('discord.js');
 module.exports = class NCommand extends Command {
     constructor(client) {
         super(client, {
@@ -33,11 +34,11 @@ module.exports = class NCommand extends Command {
         if (!modlogs) return message.channel.send('Cant Find the modlogs Channel. 🚫');
         if (rUser.id === message.author.id) return message.channel.send(`Can't warn yourself Silly.`)
         message.channel.send(`** ✅ ${rUser} Has been warned.**`)
-        const dmembed = new Discord.RichEmbed()
+        const dmembed = new MessageEmbed()
             .setColor(`#FF0000`)
             .setDescription(`You have been warned in **${message.guild.name}** For **${reason}**`)
         rUser.send(dmembed)
-        const warnembed = new Discord.RichEmbed()
+        const warnembed = new MessageEmbed()
             .setColor(`#ff0000`)
             .addField(`Warned User`, `<@${rUser.id}>`, true)
             .addField(`Moderator`, `<@${Moderatoruser}>`, true)
